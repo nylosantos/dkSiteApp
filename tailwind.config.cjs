@@ -6,7 +6,11 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        'footer': "url('src/assets/bgFooter.jpg')",
+      },
       colors: {
+        pinkPage: '#ef1aa8',
         yellowPage: {
           up: "#f8c20d",
           down: "#b9910a",

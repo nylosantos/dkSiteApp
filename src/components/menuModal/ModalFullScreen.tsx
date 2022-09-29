@@ -7,7 +7,7 @@ interface MenuModalProps {
   onClose: () => void;
 }
 
-export function ModalMidScreen({ isOpen, onClose }: MenuModalProps) {
+export function ModalFullScreen({ isOpen, onClose }: MenuModalProps) {
   return (
     <Modal
       isOpen={isOpen}
@@ -17,15 +17,15 @@ export function ModalMidScreen({ isOpen, onClose }: MenuModalProps) {
       motionPreset="none"
     >
       <ModalContent>
-        <div className="flex absolute top-0 left-0 w-screen h-16 justify-center items-center">
-          <div className={`w-10/12 flex justify-between items-center`}>
-            <p className="text-lg">MENU MODAL FULL SCREEN</p>
+        <div className="flex absolute top-0 left-0 w-screen justify-center items-center">
+          <div className='w-10/12 flex h-full py-5 justify-between items-center'>
+          <img src="./src/assets/logoBlack.png" alt="DK Logo" className="w-1/12" />
             <Button
               as={IconButton}
               aria-label="Options"
               icon={<AiOutlineClose />}
               colorScheme="blackAlpha"
-              size="xs"
+              size="md"
               onClick={onClose}
             />
           </div>

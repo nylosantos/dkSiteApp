@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ModalMidScreen } from "./ModalMidScreen";
 import { ModalCellphoneScreen } from "./ModalCellphoneScreen";
+import { ModalFullScreen } from "./ModalFullScreen";
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -8,14 +9,15 @@ interface MenuModalProps {
 }
 
 export function MenuModal({ isOpen, onClose }: MenuModalProps) {
-  const midBreakpoint = 600;
   // GET SCREEN SIZE DYNAMICALLY
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight,
   });
   const setDimension = () => {
     getDimension({
       dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
     });
   };
 
@@ -26,9 +28,14 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
       window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
-
   const width = screenSize.dynamicWidth;
-  if (width > midBreakpoint) {
+  const heigth = screenSize.dynamicHeight;
+  const midBreakpoint = 652;
+  const fullBreackpoint = 1023;
+  if (width > fullBreackpoint) {
+    return <ModalFullScreen isOpen={isOpen} onClose={onClose} />;
+  }
+  if (width > midBreakpoint && width > heigth) {
     return <ModalMidScreen isOpen={isOpen} onClose={onClose} />;
   }
   {

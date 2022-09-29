@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
 import { HeaderMidScreen } from "./HeaderMidScreen";
 import { HeaderCellphoneScreen } from "./HeaderCellphoneScreen";
+import { HeaderFullScreen } from "./HeaderFullScreen";
 
-export function Header() {
-  const midBreakpoint = 600;
+type Props = {
+  bgColor: string;
+  shadow: string;
+};
+
+export function Header({ bgColor, shadow }: Props) {
   // GET SCREEN SIZE DYNAMICALLY
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight,
   });
   const setDimension = () => {
     getDimension({
       dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
     });
   };
 
@@ -21,12 +28,10 @@ export function Header() {
       window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
-
   const width = screenSize.dynamicWidth;
-  const lowOpacity =
-    "flex fixed top-0 left-0 w-screen justify-center items-center bg-blackOpacity-10 shadow z-20";
-  const highOpacity =
-    "flex fixed top-0 left-0 w-screen justify-center items-center bg-blackOpacity-50 shadow z-20";
+  const heigth = screenSize.dynamicHeight;
+  const lowOpacity = `flex fixed top-0 left-0 w-screen justify-center items-center ${bgColor}-10 ${shadow} z-20`;
+  const highOpacity = `flex fixed top-0 left-0 w-screen justify-center items-center ${bgColor}-50 ${shadow} z-20`;
   const [headerStyle, setHeaderStyle] = useState(lowOpacity);
   const scrollBgChange = () => {
     if (window.scrollY >= 50) {
@@ -36,8 +41,15 @@ export function Header() {
     }
   };
   window.addEventListener("scroll", scrollBgChange);
-  if (width > midBreakpoint) {
-    return <HeaderMidScreen headerStyle={headerStyle} />;
+  const midBreakpoint = 652;
+  const fullBreackpoint = 1023;
+  if (width > fullBreackpoint){
+    return (
+      <HeaderFullScreen />
+    )
+  }
+  if (width > midBreakpoint && width > heigth ) {
+    return <HeaderMidScreen />;
   }
   return <HeaderCellphoneScreen headerStyle={headerStyle} />;
 }

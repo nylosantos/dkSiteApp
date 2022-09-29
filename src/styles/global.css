@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+}
+
+.bg {
+  stroke: white;
+  opacity: 0.3;
+}
+#progress .indicator {
+  stroke: red;
+}
+
+.footer {
+  @apply
+  relative
+}
+
+.footerContent {
+position: relative;
+}

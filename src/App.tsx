@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 // import HorizontalScroll from "react-scroll-horizontal";
 import { Header } from "./components/header/Header";
 import { CellphoneMission } from "./components/cellphoneScreens/CellphoneMission";
+import { MidMission } from "./components/midScreens/MidMission";
+import { FullMission } from "./components/fullScreens/FullMission";
+import { CellphoneHome } from "./components/cellphoneScreens/CellphoneHome";
+import { MidHome } from "./components/midScreens/MidHome";
+import { FullHome } from "./components/fullScreens/FullHome";
 
 function App() {
   const horizontalPage = { width: `100vw`, height: `100vh` };
@@ -29,18 +34,21 @@ function App() {
   const width = screenSize.dynamicWidth;
   const heigth = screenSize.dynamicHeight;
 
-  const midBreakpoint = 600;
+  const midBreakpoint = 652;
+  const fullBreackpoint = 1023;
 
-  if (width > midBreakpoint) {
+  if (width > fullBreackpoint){
     return (
-      <div>
-        <Header />
-        
-      </div>
+      <FullHome />
+    )
+  }
+  if (width > midBreakpoint && width > heigth ) {
+    return (
+      <MidHome />
     );
   }
   return (
-    <CellphoneMission />
+    <CellphoneHome />
   );
 }
 

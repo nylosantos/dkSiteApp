@@ -23,15 +23,19 @@ export function ModalCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
       motionPreset="none"
     >
       <ModalContent>
-        <div className="flex absolute top-0 left-0 w-screen h-8 justify-center items-center">
-          <div className={`w-10/12 flex justify-between items-center`}>
-            <p>MENU MODAL CELLPHONE</p>
+        <div className="flex absolute top-0 left-0 w-screen justify-center items-center">
+          <div className="w-10/12 h-full py-4 flex justify-between items-center">
+            <img
+              src="./src/assets/logoBlack.png"
+              alt="DK Logo"
+              className="w-2/12"
+            />
             <Button
               as={IconButton}
               aria-label="Options"
               icon={<AiOutlineClose />}
               colorScheme="blackAlpha"
-              size="xs"
+              size="md"
               onClick={onClose}
             />
           </div>

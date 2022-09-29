@@ -3,6 +3,7 @@ import { Header } from "../header/Header";
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import carrouselImages from "../CellphoneArray";
+import { IconButton } from "@chakra-ui/react";
 
 export function CellphoneMission() {
   //set carousel width
@@ -15,14 +16,14 @@ export function CellphoneMission() {
   }, []);
   return (
     <div className="flex flex-col w-screen h-full bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
-      <Header />
+      <Header bgColor="blackOpacity" shadow="" />
       <div className="flex flex-col">
         <Fade delay={10} direction="left" damping={0.1} cascade={true}>
           <div className="flex fixed top-10 left-0 w-12/12 z-0">
             <img src="./src/assets/leftWatermark.png" alt="DK Left Watermark" />
           </div>
 
-          <div className="flex flex-col mt-8 w-10/12 z-10">
+          <div className="flex flex-col mt-[5rem] w-10/12 z-10">
             <img
               src="./src/assets/imageLeft.png"
               alt="God with Reality Glasses"
@@ -41,7 +42,6 @@ export function CellphoneMission() {
                 <li>entertainment, technology</li>
                 <li>and art to connect people</li>
               </ul>
-              {/* <br /> */}
             </Fade>
             <div className="flex mt-8 w-screen">
               <motion.div
@@ -75,6 +75,7 @@ export function CellphoneMission() {
                   })}
                 </motion.div>
               </motion.div>
+
               <Fade delay={800}>
                 <div className="flex fixed bottom-0 right-0 w-4/12 z-0 opacity-60">
                   <img
@@ -83,6 +84,11 @@ export function CellphoneMission() {
                   />
                 </div>
               </Fade>
+            </div>
+              <div className="w-screen flex justify-center pb-10">
+              <IconButton aria-label="Our Teamys" className="w-[300px] items-center" colorScheme='whiteAlpha'>
+                <p className="text-center text-2xl text-black">OUR TEAMYS</p>
+              </IconButton>
             </div>
           </div>
         </div>

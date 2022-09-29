@@ -3,11 +3,7 @@ import { MenuModal } from "../menuModal/MenuModal";
 import { Button, IconButton } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-type Props = {
-  headerStyle: string;
-};
-
-export function HeaderMidScreen({ headerStyle }: Props) {
+export function HeaderMidScreen() {
   function handleToggleModal() {
     if (isOpen) {
       setIsOpen(false);
@@ -18,10 +14,10 @@ export function HeaderMidScreen({ headerStyle }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const closeInstructionModal = () => setIsOpen(false);
   return (
-    <div className={headerStyle}>
+    <div className="flex fixed top-0 left-0 w-screen justify-center items-center z-20">
       <MenuModal isOpen={isOpen} onClose={closeInstructionModal} />
-      <div className="w-10/12 h-16 flex justify-between items-center">
-        <p className="text-lg">MENU MID SCREEN</p>
+      <div className="w-10/12 h-16 py-5 flex justify-between items-center">
+        <img src="./src/assets/logo.png" alt="DK Logo" className="w-1/12" />
         <Button
           as={IconButton}
           aria-label="Options"

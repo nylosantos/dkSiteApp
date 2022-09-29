@@ -20,13 +20,13 @@ export function HeaderCellphoneScreen({ headerStyle }: Props) {
   return (
     <div className={headerStyle}>
       <MenuModal isOpen={isOpen} onClose={closeInstructionModal} />
-      <div className="w-10/12 h-8 flex justify-between items-center">
-        <p>MENU CELLPHONE</p>
+      <div className="w-10/12 h-full py-4 flex justify-between items-center">
+      <img src="./src/assets/logo.png" alt="DK Logo" className="w-2/12" />
         <Button
           as={IconButton}
           aria-label="Options"
           icon={<GiHamburgerMenu />}
-          size="xs"
+          size="md"
           colorScheme="whiteAlpha"
           onClick={handleToggleModal}
         />
