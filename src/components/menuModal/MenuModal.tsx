@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ModalMidScreen } from "./modalScreens/ModalMidScreen";
-import { ModalCellphoneScreen } from "./modalScreens/ModalCellphoneScreen";
+import { ModalMidScreen } from "./ModalMidScreen";
+import { ModalCellphoneScreen } from "./ModalCellphoneScreen";
 
 interface MenuModalProps {
   isOpen: boolean;

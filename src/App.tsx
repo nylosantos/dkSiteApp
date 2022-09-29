@@ -1,9 +1,6 @@
-import { useRef, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 // import HorizontalScroll from "react-scroll-horizontal";
-import carrouselImages from "./components/CellphoneArray";
-import { Header } from "./components/Header";
-import { Fade } from "react-awesome-reveal";
+import { Header } from "./components/header/Header";
 import { CellphoneMission } from "./components/cellphoneScreens/CellphoneMission";
 
 function App() {
@@ -38,8 +35,7 @@ function App() {
     return (
       <div>
         <Header />
-        <h3>Component 1</h3>
-        <p>Current width is {width} px</p>
+        
       </div>
     );
   }

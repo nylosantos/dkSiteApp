@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Header } from "../Header";
+import { Header } from "../header/Header";
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import carrouselImages from "../CellphoneArray";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { HeaderMidScreen } from "./midScreens/HeaderMidScreen";
-import { HeaderCellphoneScreen } from "./midScreens/HeaderCellphoneScreen";
+import { HeaderMidScreen } from "./HeaderMidScreen";
+import { HeaderCellphoneScreen } from "./HeaderCellphoneScreen";
 
 export function Header() {
   const midBreakpoint = 600;
@@ -24,9 +24,9 @@ export function Header() {
 
   const width = screenSize.dynamicWidth;
   const lowOpacity =
-    "flex fixed top-0 left-0 w-screen h-8 justify-center items-center bg-blackOpacity-10 shadow z-20";
+    "flex fixed top-0 left-0 w-screen justify-center items-center bg-blackOpacity-10 shadow z-20";
   const highOpacity =
-    "flex fixed top-0 left-0 w-screen h-8 justify-center items-center bg-blackOpacity-50 shadow z-20";
+    "flex fixed top-0 left-0 w-screen justify-center items-center bg-blackOpacity-50 shadow z-20";
   const [headerStyle, setHeaderStyle] = useState(lowOpacity);
   const scrollBgChange = () => {
     if (window.scrollY >= 50) {

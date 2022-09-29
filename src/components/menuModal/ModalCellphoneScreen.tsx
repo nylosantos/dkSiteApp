@@ -6,7 +6,7 @@ import {
   ModalContent,
 } from "@chakra-ui/react";
 import { AiOutlineClose } from "react-icons/ai";
-import { MenuContent } from "../MenuContent";
+import { MenuContent } from "./MenuContent";
 
 interface MenuModalProps {
   isOpen: boolean;

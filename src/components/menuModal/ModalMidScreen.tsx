@@ -1,6 +1,12 @@
-import { Button, IconButton, Modal, ModalBody, ModalContent } from "@chakra-ui/react";
+import {
+  Button,
+  IconButton,
+  Modal,
+  ModalBody,
+  ModalContent,
+} from "@chakra-ui/react";
 import { AiOutlineClose } from "react-icons/ai";
-import { MenuContent } from "../MenuContent";
+import { MenuContent } from "./MenuContent";
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -17,15 +23,17 @@ export function ModalMidScreen({ isOpen, onClose }: MenuModalProps) {
       motionPreset="none"
     >
       <ModalContent>
-        <div className="flex absolute top-0 left-0 w-screen h-8 justify-center items-center">
+        <div
+          className="flex absolute top-0 left-0 w-screen h-16 justify-center items-center"
+        >
           <div className={`w-10/12 flex justify-between items-center`}>
-            <p>MENU MODAL MID SCREEN FUNCIONA SIM!</p>
+            <p className="text-lg">MENU MODAL MID SCREEN</p>
             <Button
               as={IconButton}
               aria-label="Options"
               icon={<AiOutlineClose />}
               colorScheme="blackAlpha"
-              size="xs"
+              size="md"
               onClick={onClose}
             />
           </div>

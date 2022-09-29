@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MenuModal } from "../MenuModal";
+import { MenuModal } from "../menuModal/MenuModal";
 import { Button, IconButton } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 

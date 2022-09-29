@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MenuModal } from "../MenuModal";
+import { MenuModal } from "../menuModal/MenuModal";
 import { Button, IconButton } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -20,13 +20,13 @@ export function HeaderMidScreen({ headerStyle }: Props) {
   return (
     <div className={headerStyle}>
       <MenuModal isOpen={isOpen} onClose={closeInstructionModal} />
-      <div className="w-10/12 h-8 flex justify-between items-center">
-        <p>MENU MID SCREEN</p>
+      <div className="w-10/12 h-16 flex justify-between items-center">
+        <p className="text-lg">MENU MID SCREEN</p>
         <Button
           as={IconButton}
           aria-label="Options"
           icon={<GiHamburgerMenu />}
-          size="xs"
+          size="md"
           colorScheme="whiteAlpha"
           onClick={handleToggleModal}
         />
