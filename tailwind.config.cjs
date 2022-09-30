@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      fontSize: {
+        xxs: '0.6rem',
+        xxxs: '0.4rem',
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
@@ -14,6 +18,10 @@ module.exports = {
         yellowPage: {
           up: "#f8c20d",
           down: "#b9910a",
+        },
+        bluePage: {
+          up: "#63f8d3",
+          down: "#0c3372"
         },
         blackOpacity: {
           10: "#0000001A",

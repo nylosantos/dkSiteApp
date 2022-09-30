@@ -7,6 +7,12 @@ import { FullMission } from "./components/fullScreens/FullMission";
 import { CellphoneHome } from "./components/cellphoneScreens/CellphoneHome";
 import { MidHome } from "./components/midScreens/MidHome";
 import { FullHome } from "./components/fullScreens/FullHome";
+import { FullTeam } from "./components/fullScreens/FullTeam";
+import { MidTeam } from "./components/midScreens/MidTeam";
+import { CellphoneTeam } from "./components/cellphoneScreens/CellphoneTeam";
+import { CellphoneWho } from "./components/cellphoneScreens/CellphoneWho";
+import { MidWho } from "./components/midScreens/MidWho";
+import { FullWho } from "./components/fullScreens/FullWho";
 
 function App() {
   const horizontalPage = { width: `100vw`, height: `100vh` };
