@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineClose } from "react-icons/ai";
 import { MenuContent } from "./MenuContent";
+import { Link } from "react-router-dom";
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -25,15 +26,17 @@ export function ModalCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
       <ModalContent>
         <div className="flex absolute top-0 left-0 w-screen justify-center items-center">
           <div className="w-10/12 h-full py-4 flex justify-between items-center">
-            <img
-              src="./src/assets/logoBlack.png"
-              alt="DK Logo"
-              className="w-2/12"
-            />
+            <Link to={"/"} onClick={onClose}>
+              <img
+                src="./src/assets/logoBlack.png"
+                alt="DK Logo"
+                className="w-2/12"
+              />
+            </Link>
             <Button
               as={IconButton}
               aria-label="Options"
-              icon={<AiOutlineClose />}
+              icon={<AiOutlineClose/>}
               colorScheme="blackAlpha"
               size="md"
               onClick={onClose}
@@ -41,7 +44,7 @@ export function ModalCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
           </div>
         </div>
         <ModalBody className="flex">
-          <MenuContent />
+          <MenuContent style="flex flex-col gap-10 text-3xl" />
         </ModalBody>
       </ModalContent>
     </Modal>

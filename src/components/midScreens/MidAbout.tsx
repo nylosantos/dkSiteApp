@@ -5,8 +5,9 @@ import carrouselImages from "../CellphoneArray";
 import HorizontalScroll from "react-scroll-horizontal";
 import { motion, useScroll } from "framer-motion";
 import { IconButton } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-export function MidMission() {
+export function MidAbout() {
   const ref = useRef(null);
   const { scrollXProgress } = useScroll({ container: ref });
   return (
@@ -90,13 +91,15 @@ export function MidMission() {
             </div>
           </div>
           <div className="w-screen flex justify-center">
-            <IconButton
-              aria-label="Our Teamys"
-              className="w-[200px] items-center"
-              colorScheme="whiteAlpha"
-            >
-              <p className="text-center text-lg text-black">OUR TEAMYS</p>
-            </IconButton>
+            <Link to={"/Team"}>
+              <IconButton
+                aria-label="Our Teamys"
+                className="w-[200px] items-center"
+                colorScheme="whiteAlpha"
+              >
+                <p className="text-center text-lg text-black">OUR TEAMYS</p>
+              </IconButton>
+            </Link>
           </div>
           <Fade delay={800}>
             <div className="flex w-1/12 fixed bottom-0 right-0 z-0 opacity-60">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MenuModal } from "../menuModal/MenuModal";
 import { Button, IconButton } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export function HeaderMidScreen() {
   function handleToggleModal() {
@@ -17,7 +18,9 @@ export function HeaderMidScreen() {
     <div className="flex fixed top-0 left-0 w-screen justify-center items-center z-20">
       <MenuModal isOpen={isOpen} onClose={closeInstructionModal} />
       <div className="w-10/12 h-16 py-5 flex justify-between items-center">
-        <img src="./src/assets/logo.png" alt="DK Logo" className="w-1/12" />
+        <Link to={"/"}>
+          <img src="./src/assets/logo.png" alt="DK Logo" className="w-1/12" />
+        </Link>
         <Button
           as={IconButton}
           aria-label="Options"

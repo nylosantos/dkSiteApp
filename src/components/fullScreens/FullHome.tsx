@@ -32,6 +32,7 @@ export function FullHome() {
       >
         TECH SOLUTIONS TO WONDER
       </Fade>
+
       <div className="w-full h-full flex flex-col justify-center items-center gap-4 pt-4 pb-12">
         <div className="flex flex-wrap w-9/12 justify-center gap-32">
           <Zoom>

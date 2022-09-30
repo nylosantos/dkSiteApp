@@ -1,6 +1,13 @@
-import { Button, IconButton, Modal, ModalBody, ModalContent } from "@chakra-ui/react";
+import {
+  Button,
+  IconButton,
+  Modal,
+  ModalBody,
+  ModalContent,
+} from "@chakra-ui/react";
 import { AiOutlineClose } from "react-icons/ai";
 import { MenuContent } from "./MenuContent";
+import { Link } from "react-router-dom";
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -18,8 +25,14 @@ export function ModalFullScreen({ isOpen, onClose }: MenuModalProps) {
     >
       <ModalContent>
         <div className="flex absolute top-0 left-0 w-screen justify-center items-center">
-          <div className='w-10/12 flex h-full py-5 justify-between items-center'>
-          <img src="./src/assets/logoBlack.png" alt="DK Logo" className="w-1/12" />
+          <div className="w-10/12 flex h-full py-5 justify-between items-center">
+            <Link to={"/"} onClick={onClose}>
+              <img
+                src="./src/assets/logoBlack.png"
+                alt="DK Logo"
+                className="w-1/12"
+              />
+            </Link>
             <Button
               as={IconButton}
               aria-label="Options"
@@ -31,7 +44,7 @@ export function ModalFullScreen({ isOpen, onClose }: MenuModalProps) {
           </div>
         </div>
         <ModalBody className="flex">
-          <MenuContent />
+          <MenuContent style="flex flex-col gap-16 text-5xl" />
         </ModalBody>
       </ModalContent>
     </Modal>

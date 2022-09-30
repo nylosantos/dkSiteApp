@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import carrouselImages from "../CellphoneArray";
 import { IconButton } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-export function CellphoneMission() {
+export function CellphoneAbout() {
   //set carousel width
   const [carouselWidth, setCarouselWidth] = useState(0);
   const carousel = useRef() as React.MutableRefObject<HTMLInputElement>;
@@ -85,10 +86,16 @@ export function CellphoneMission() {
                 </div>
               </Fade>
             </div>
-              <div className="w-screen flex justify-center pb-10">
-              <IconButton aria-label="Our Teamys" className="w-[300px] items-center" colorScheme='whiteAlpha'>
-                <p className="text-center text-2xl text-black">OUR TEAMYS</p>
-              </IconButton>
+            <div className="w-screen flex justify-center pb-10">
+              <Link to={"/Team"}>
+                <IconButton
+                  aria-label="Our Teamys"
+                  className="w-[300px] items-center"
+                  colorScheme="whiteAlpha"
+                >
+                  <p className="text-center text-2xl text-black">OUR TEAMYS</p>
+                </IconButton>
+              </Link>
             </div>
           </div>
         </div>

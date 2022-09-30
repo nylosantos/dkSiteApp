@@ -2,7 +2,7 @@ import { Header } from "../header/Header";
 import { Fade, Zoom } from "react-awesome-reveal";
 import partners from "../PartnersArray";
 
-export function CellphoneWho() {
+export function CellphonePortfolio() {
   // //set carousel width
   // const [carouselWidth, setCarouselWidth] = useState(0);
   // const carousel = useRef() as React.MutableRefObject<HTMLInputElement>;

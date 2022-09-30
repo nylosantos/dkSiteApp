@@ -6,6 +6,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
+import { useState } from "react";
+import { ContactModal } from "../contactModal/ContactModal";
 
 export function FooterCellphoneScreen() {
   function handleGoTop() {
@@ -14,9 +16,12 @@ export function FooterCellphoneScreen() {
       behavior: "smooth",
     });
   }
+  const [isOpen, setIsOpen] = useState(false);
+  const closeInstructionModal = () => setIsOpen(false);
   return (
     //more FOOTER CSS in global.css
     <div className="flex flex-col h-full py-5 bg-gray-900 footer justify-center gap-6">
+      <ContactModal isOpen={isOpen} onClose={closeInstructionModal} />
       <Fade className="flex justify-center items-center">
         {
           <>
@@ -35,13 +40,13 @@ export function FooterCellphoneScreen() {
         }
       </Fade>
       <div className="flex justify-center items-start gap-6">
-            <Fade>
-              <FaLinkedinIn className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-              <FaTwitter className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-              <FaFacebookF className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-              <FaInstagram className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-            </Fade>
-          </div>
+        <Fade>
+          <FaLinkedinIn className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
+          <FaTwitter className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
+          <FaFacebookF className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
+          <FaInstagram className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
+        </Fade>
+      </div>
       <div className="flex">
         <Fade direction="right">
           <div
@@ -52,12 +57,15 @@ export function FooterCellphoneScreen() {
               strategies to achieve your goals and we will use the best tool to
               make it through.
             </p>
-            <div className="flex gap-6 items-center cursor-pointer hover:text-pinkPage hover:transition hover:transform hover:translate-x-2 hover:duration-300">
+            <div
+              className="flex gap-6 items-center cursor-pointer hover:text-pinkPage hover:transition hover:transform hover:translate-x-2 hover:duration-300"
+              onClick={() => setIsOpen(true)}
+            >
               <p className="text-3xl font-bold lowercase">Say Hello</p>
               <BsArrowRight className="text-3xl" />
             </div>
             <div className="relative mt-10 flex text-xs text-gray-400 w-full gap-10 justify-center divide-x-[1] text-center">
-              <p >©2022. DK. All rights reserved.</p>
+              <p>©2022. DK. All rights reserved.</p>
               <p className="cursor-pointer hover:text-pinkPage transition-all duration-200">
                 Terms of Use
               </p>

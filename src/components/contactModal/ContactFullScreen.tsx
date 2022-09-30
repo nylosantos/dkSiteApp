@@ -89,6 +89,7 @@ export function ContactFullScreen({ isOpen, onClose }: MenuModalProps) {
       size="lg"
       isCentered
       motionPreset="none"
+      blockScrollOnMount={false}
     >
       <ModalOverlay />
       <ModalContent className="p-8">
@@ -138,7 +139,7 @@ export function ContactFullScreen({ isOpen, onClose }: MenuModalProps) {
             />
             <button
               disabled={submitting}
-              className="my-2 bg-blue-700 text-white w-full p-2 hover:bg-blue-900 transition-colors duration-200"
+              className="my-2 bg-yellowPage-up text-white font-bold w-full p-2 hover:bg-yellowPage-down transition-colors duration-200"
             >
               {submitting ? "Submitting..." : "Submit"}
             </button>

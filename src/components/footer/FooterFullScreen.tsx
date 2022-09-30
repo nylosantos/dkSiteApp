@@ -16,13 +16,6 @@ export function FooterFullScreen() {
       behavior: "smooth",
     });
   }
-  function handleToggleModal() {
-    if (isOpen) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
-  }
   const [isOpen, setIsOpen] = useState(false);
   const closeInstructionModal = () => setIsOpen(false);
   return (

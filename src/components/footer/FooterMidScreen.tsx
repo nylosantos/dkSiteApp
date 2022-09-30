@@ -6,6 +6,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
+import { useState } from "react";
+import { ContactModal } from "../contactModal/ContactModal";
 
 export function FooterMidScreen() {
   function handleGoTop() {
@@ -14,9 +16,12 @@ export function FooterMidScreen() {
       behavior: "smooth",
     });
   }
+  const [isOpen, setIsOpen] = useState(false);
+  const closeInstructionModal = () => setIsOpen(false);
   return (
     //more FOOTER CSS in global.css
     <div className="flex flex-col h-full py-5 bg-gray-900 footer justify-center gap-6">
+      <ContactModal isOpen={isOpen} onClose={closeInstructionModal} />
       <Fade className="flex justify-center items-center">
         <img
           src="./src/assets/logoPearl.png"
@@ -43,7 +48,10 @@ export function FooterMidScreen() {
               strategies to achieve your goals and we will use the best tool to
               make it through.
             </p>
-            <div className="flex gap-6 items-center cursor-pointer hover:text-pinkPage hover:transition hover:transform hover:translate-x-2 hover:duration-300">
+            <div
+              className="flex gap-6 items-center cursor-pointer hover:text-pinkPage hover:transition hover:transform hover:translate-x-2 hover:duration-300"
+              onClick={() => setIsOpen(true)}
+            >
               <p className="text-3xl font-bold lowercase">Say Hello</p>
               <BsArrowRight className="text-3xl" />
             </div>
