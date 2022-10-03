@@ -8,6 +8,7 @@ import {
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import { ContactModal } from "../contactModal/ContactModal";
+import { Link } from "react-router-dom";
 
 export function FooterCellphoneScreen() {
   function handleGoTop() {
@@ -64,11 +65,23 @@ export function FooterCellphoneScreen() {
               <p className="text-3xl font-bold lowercase">Say Hello</p>
               <BsArrowRight className="text-3xl" />
             </div>
-            <div className="relative mt-10 flex text-xs text-gray-400 w-full gap-10 justify-center divide-x-[1] text-center">
-              <p>©2022. DK. All rights reserved.</p>
-              <p className="cursor-pointer hover:text-pinkPage transition-all duration-200">
-                Terms of Use
+            <div className="relative flex flex-col text-base text-gray-400 w-full mt-4 -mb-4 justify-center text-center">
+              <p className="w-full text-xxs">
+                ©2022. Daniel Kosttás. All rights reserved.
               </p>
+              <div className="flex w-full items-center justify-between gap-2">
+                <Link to={"/cookie-policy"} className="w-full">
+                  <p className="cursor-pointer hover:text-pinkPage transition-all duration-200 w-full text-xxs text-right">
+                    Cookie Policy
+                  </p>
+                </Link>
+                <p className="text-xxs">|</p>
+                <Link to={"/privacy-policy"} className="w-full">
+                  <p className="cursor-pointer hover:text-pinkPage transition-all duration-200  text-xxs text-left">
+                    Privacy Policy
+                  </p>
+                </Link>
+              </div>
             </div>
           </div>
         </Fade>

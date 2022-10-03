@@ -8,6 +8,7 @@ import {
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import { ContactModal } from "../contactModal/ContactModal";
+import { Link } from "react-router-dom";
 
 export function FooterFullScreen() {
   function handleGoTop() {
@@ -20,7 +21,7 @@ export function FooterFullScreen() {
   const closeInstructionModal = () => setIsOpen(false);
   return (
     //more FOOTER CSS in global.css
-    <div className="flex h-96 py-5 bg-gray-900 footer justify-center">
+    <div className="flex h-96 py-5 bg-gray-900 footer justify-center w-screen">
       <ContactModal isOpen={isOpen} onClose={closeInstructionModal} />
       <div className="flex container">
         <div className="text-3xl text-white flex flex-col w-full gap-4">
@@ -59,11 +60,23 @@ export function FooterFullScreen() {
               <p className="text-5xl font-bold lowercase">Say Hello</p>
               <BsArrowRight className="text-5xl" />
             </div>
-            <div className="relative flex top-28 text-base text-gray-400 w-full gap-10 justify-center divide-x-[1] text-center">
-              <p className="w-full">©2022. Figaro. All rights reserved.</p>
-              <p className="cursor-pointer hover:text-pinkPage transition-all duration-200 w-full">
-                Terms of Use
+            <div className="relative flex top-28 text-base text-gray-400 w-full gap-10 justify-center text-center">
+              <p className="w-full text-sm">
+                ©2022. Daniel Kosttás. All rights reserved.
               </p>
+              <div className="flex w-full items-center justify-between gap-2">
+                <Link to={"/cookie-policy"} className="w-full">
+                  <p className="cursor-pointer hover:text-pinkPage transition-all duration-200 w-full text-sm text-right">
+                    Cookie Policy
+                  </p>
+                </Link>
+                <p className="text-sm">|</p>
+                <Link to={"/privacy-policy"} className="w-full">
+                  <p className="cursor-pointer hover:text-pinkPage transition-all duration-200 text-sm text-left">
+                    Privacy Policy
+                  </p>
+                </Link>
+              </div>
             </div>
           </div>
         </Fade>

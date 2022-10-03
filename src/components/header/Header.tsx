@@ -30,8 +30,8 @@ export function Header({ bgColor, shadow }: Props) {
   }, [screenSize]);
   const width = screenSize.dynamicWidth;
   const heigth = screenSize.dynamicHeight;
-  const lowOpacity = `flex fixed top-0 left-0 w-screen justify-center items-center ${bgColor}-10 ${shadow} z-20`;
-  const highOpacity = `flex fixed top-0 left-0 w-screen justify-center items-center ${bgColor}-50 ${shadow} z-20`;
+  const lowOpacity = `flex fixed top-0 left-0 w-screen justify-center items-center ${bgColor}-10 z-20`;
+  const highOpacity = `flex fixed top-0 left-0 w-screen justify-center items-center ${bgColor}-30 ${shadow} z-20`;
   const [headerStyle, setHeaderStyle] = useState(lowOpacity);
   const scrollBgChange = () => {
     if (window.scrollY >= 50) {
