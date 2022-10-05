@@ -18,13 +18,13 @@ export function MenuContent({ style }: Props) {
           <Link to={"/"} onClick={closeInstructionModal}>
             <li>Home</li>
           </Link>
-          <Link to={"/About"} onClick={closeInstructionModal}>
+          <Link to={"/about"} onClick={closeInstructionModal}>
             <li>About</li>
           </Link>
-          <Link to={"/Team"} onClick={closeInstructionModal}>
+          <Link to={"/team"} onClick={closeInstructionModal}>
             <li>Our Teamys</li>
           </Link>
-          <Link to={"/Portfolio"} onClick={closeInstructionModal}>
+          <Link to={"/portfolio"} onClick={closeInstructionModal}>
             <li>Portfolio</li>
           </Link>
           <li className="cursor-pointer" onClick={() => setIsOpen(true)}>

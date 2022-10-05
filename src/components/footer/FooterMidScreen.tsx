@@ -4,13 +4,43 @@ import {
   FaTwitter,
   FaFacebookF,
   FaInstagram,
+  FaTiktok,
+  FaYoutube,
 } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import { ContactModal } from "../contactModal/ContactModal";
 import { Link } from "react-router-dom";
 
+
+
 export function FooterMidScreen() {
+  function handleSocialMedia(link: string) {
+    if (link === "linkedin") {
+      window.open("https://www.linkedin.com/in/danikosttas", "_blank");
+    }
+    if (link === "facebook") {
+      window.open("https://www.facebook.com/danikosttas/", "_blank");
+    }
+    if (link === "instagram") {
+      window.open("https://www.instagram.com/danikosttas/", "_blank");
+    }
+    if (link === "twitter") {
+      window.open(
+        "https://twitter.com/danikosttas?t=DP5iBa9ZMZJp9ejmvLoJiA&s=08",
+        "_blank"
+      );
+    }
+    if (link === "tiktok") {
+      window.open("https://www.tiktok.com/@danikosttas", "_blank");
+    }
+    if (link === "youtube") {
+      window.open(
+        "https://www.youtube.com/channel/UC9dTblefq7RtrsdzycHw-xQ",
+        "_blank"
+      );
+    }
+  }
   function handleGoTop() {
     window.scrollTo({
       top: 0,
@@ -25,7 +55,7 @@ export function FooterMidScreen() {
       <ContactModal isOpen={isOpen} onClose={closeInstructionModal} />
       <Fade className="flex justify-center items-center">
         <img
-          src="./src/assets/logoPearl.png"
+          src="./assets/logoPearl.png"
           alt="DK Logo Footer"
           className="w-2/6"
           onClick={handleGoTop}
@@ -33,10 +63,30 @@ export function FooterMidScreen() {
       </Fade>
       <div className="flex justify-center items-start gap-6">
         <Fade>
-          <FaLinkedinIn className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-          <FaTwitter className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-          <FaFacebookF className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-          <FaInstagram className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer" />
+          <FaLinkedinIn
+            onClick={() => handleSocialMedia("linkedin")}
+            className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+          />
+          <FaFacebookF
+            onClick={() => handleSocialMedia("facebook")}
+            className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+          />
+          <FaInstagram
+            onClick={() => handleSocialMedia("instagram")}
+            className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+          />
+          <FaTwitter
+            onClick={() => handleSocialMedia("twitter")}
+            className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+          />
+          <FaTiktok
+            onClick={() => handleSocialMedia("tiktok")}
+            className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+          />
+          <FaYoutube
+            onClick={() => handleSocialMedia("youtube")}
+            className="text-base text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+          />
         </Fade>
       </div>
       <div className="flex right-0">

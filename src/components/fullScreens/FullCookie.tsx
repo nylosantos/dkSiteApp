@@ -38,12 +38,13 @@ export function FullCookie() {
             <br /> 
             <h3 className="font-bold font-poppins text-white text-left">
               Type of cookie 
-            </h3><br />
+            </h3>
+            <br />
             <p className=" my-6 text-poppins text-base font-normal text-white">
               There are different types of cookies:
             </p>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-5">
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">proprietary cookies</span>: used
                 solely to anonymously identify the user’s browsing session and
                 to make the website easy to navigate; a particular type of
@@ -52,7 +53,7 @@ export function FullCookie() {
                 and how they visit the site and thus process general statistics
                 on the service and its use
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">third-party cookies</span>used to
                 monitor and profile users during browsing, study their movements
                 and web browsing or consumption habits (what they buy, what they
@@ -64,11 +65,11 @@ export function FullCookie() {
               Both proprietary and third-party cookies can be:
             </p>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-5">
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">technical</span>: subject to and
                 readable only by the domain that created them;
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">profiling</span>: subject to and
                 created by domains outside the one the user is visiting.
               </li>
@@ -77,13 +78,13 @@ export function FullCookie() {
               In addition, cookies can be:
             </p>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-5">
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">temporary</span>: a temporary or
                 ‘session’ cookie is stored on your computer during your visit to
                 a website and is deleted when you leave your Internet browser
                 and/or switch off your computer, i.e.
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">persistent</span>: a permanent or
                 ‘persistent’ cookie is a cookie that remains stored in your
                 terminal equipment until you delete it.
@@ -98,7 +99,8 @@ export function FullCookie() {
             <br />
             <h3 className="font-bold font-poppins text-white text-left">
               Which cookies this website uses. 
-            </h3><br />
+            </h3>
+            <br />
             <p className=" my-6 text-poppins text-base font-normal text-white">
               The website of the company Costa de Souza Daniel corresponding to
               the address <Link to={"/"}>https://danielkosttas.com/</Link> uses
@@ -106,27 +108,27 @@ export function FullCookie() {
               are given below:
             </p>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-5">
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Technical name</span>: __utmz
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Type</span>: Google Analytics
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Function</span>: They collect
                 information in anonymous form on the number of visitors, where
                 the come from and the pages they visit
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Duration</span>: 6 months
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Domain</span>: danielkosttas.com
               </li>
             </ul>
             <span className="font-bold text-white">proprietary cookies.</span>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-5">
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Technical cookies:</span>
                 <br />
                 This site uses technical cookies exclusively to anonymously
@@ -137,7 +139,7 @@ export function FullCookie() {
                 of random numbers generated by the server) necessary to enable
                 the safe and efficient exploration of the site.
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Profiling cookies:</span>
                 <br />
                 This website does not use proprietary profiling cookies, i.e.
@@ -156,7 +158,7 @@ export function FullCookie() {
               collection of this information, provided below.
             </p>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-5">
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Analytics cookies:</span>
                 <br />
                 Analytics cookies, a service of Google Analytics, collect
@@ -174,7 +176,7 @@ export function FullCookie() {
                 </a>
                 .
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Social buttons and widgets:</span>
                 <br />
                 When visiting the website, it is also possible to find social
@@ -191,26 +193,26 @@ export function FullCookie() {
               </li>
             </ul>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-10">
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Facebook(information):</span>
                 <br />
                 <a href="https://www.facebook.com/help/cookies/ ">
                   https://www.facebook.com/help/cookies/
                 </a>
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Facebook (configuration):</span>
                 <br />
                 log in to your account. Privacy section;
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Twitter (privacy policy):</span>
                 <br />
                 <a href="https://twitter.com/privacy?lang=it">
                   https://twitter.com/privacy?lang=it
                 </a>
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">
                   Twitter (cookie policy and configuration):
                 </span>
@@ -219,14 +221,14 @@ export function FullCookie() {
                   https://help.twitter.com/pt/rules-and-policies/twitter-cookies#
                 </a>
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Linkedin (privacy policy):</span>
                 <br />
                 <a href="https://www.linkedin.com/legal/privacy-policy">
                   https://www.linkedin.com/legal/privacy-policy
                 </a>
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">
                   Linkedin (cookie policy and configuration):
                 </span>
@@ -235,21 +237,21 @@ export function FullCookie() {
                   https://www.linkedin.com/legal/cookie-policy?trk=hb_ft_cookie
                 </a>
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Instagram (privacy policy):</span>
                 <br />
                 <a href="https://instagram.com/about/legal/privacy">
                   https://instagram.com/about/legal/privacy
                 </a>
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Google+ information:</span>
                 <br />
                 <a href="https://policies.google.com/technologies/cookies?hl=it&gl=it">
                   https://policies.google.com/technologies/cookies?hl=it&gl=it
                 </a>
               </li>
-              <li className='my-3'>
+              <li className="my-3">
                 <span className="font-bold">Google+(configuration):</span>
                 <br />
                 <a href="https://policies.google.com/technologies/cookies?hl=it&gl=it#managing-cookies">
@@ -260,7 +262,8 @@ export function FullCookie() {
             <br /> 
             <h3 className="font-bold font-poppins text-white text-left">
               Blocking or Deleting Cookies
-            </h3><br />
+            </h3>
+            <br />
             <p className=" my-6 text-poppins text-base font-normal text-white">
               If you wish, you can delete the cookies stored in your browser or
               even block them from being sent automatically.
@@ -272,11 +275,11 @@ export function FullCookie() {
               information on cookie management:
             </p>
             <ul className="text-poppins text-base font-normal text-white list-disc pl-5">
-              <li className='my-3'>Internet Explorer</li>
-              <li className='my-3'>Firefox</li>
-              <li className='my-3'>Chrome</li>
-              <li className='my-3'>Opera</li>
-              <li className='my-3'>Safari</li>
+              <li className="my-3">Internet Explorer</li>
+              <li className="my-3">Firefox</li>
+              <li className="my-3">Chrome</li>
+              <li className="my-3">Opera</li>
+              <li className="my-3">Safari</li>
             </ul>
           </div>
         </div>

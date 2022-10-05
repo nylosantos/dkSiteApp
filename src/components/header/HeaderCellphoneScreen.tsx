@@ -22,8 +22,8 @@ export function HeaderCellphoneScreen({ headerStyle }: Props) {
     <div className={headerStyle}>
       <MenuModal isOpen={isOpen} onClose={closeInstructionModal} />
       <div className="w-10/12 h-full py-4 flex justify-between items-center">
-        <Link to={"/"}>
-          <img src="./src/assets/logo.png" alt="DK Logo" className="w-2/12" />
+        <Link to={"/"} className='outline-hidden'>
+          <img src="./assets/logo.png" alt="DK Logo" className="w-2/12" />
         </Link>
         <Button
           as={IconButton}

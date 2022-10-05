@@ -4,6 +4,8 @@ import {
   FaTwitter,
   FaFacebookF,
   FaInstagram,
+  FaTiktok,
+  FaYoutube,
 } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
@@ -11,6 +13,32 @@ import { ContactModal } from "../contactModal/ContactModal";
 import { Link } from "react-router-dom";
 
 export function FooterFullScreen() {
+  function handleSocialMedia(link: string) {
+    if (link === "linkedin") {
+      window.open("https://www.linkedin.com/in/danikosttas", "_blank");
+    }
+    if (link === "facebook") {
+      window.open("https://www.facebook.com/danikosttas/", "_blank");
+    }
+    if (link === "instagram") {
+      window.open("https://www.instagram.com/danikosttas/", "_blank");
+    }
+    if (link === "twitter") {
+      window.open(
+        "https://twitter.com/danikosttas?t=DP5iBa9ZMZJp9ejmvLoJiA&s=08",
+        "_blank"
+      );
+    }
+    if (link === "tiktok") {
+      window.open("https://www.tiktok.com/@danikosttas", "_blank");
+    }
+    if (link === "youtube") {
+      window.open(
+        "https://www.youtube.com/channel/UC9dTblefq7RtrsdzycHw-xQ",
+        "_blank"
+      );
+    }
+  }
   function handleGoTop() {
     window.scrollTo({
       top: 0,
@@ -28,7 +56,7 @@ export function FooterFullScreen() {
           <div className="flex items-center h-[50%]">
             <Fade>
               <img
-                src="./src/assets/logoPearl.png"
+                src="./assets/logoPearl.png"
                 alt="DK Logo Footer"
                 className="w-2/6 cursor-pointer"
                 onClick={handleGoTop}
@@ -37,34 +65,54 @@ export function FooterFullScreen() {
           </div>
           <div className="text-lg flex items-start gap-6 h-[50%]">
             <Fade>
-              <FaLinkedinIn className="text-3xl hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-              <FaTwitter className="text-3xl hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-              <FaFacebookF className="text-3xl hover:text-pinkPage transition-all duration-200 cursor-pointer" />
-              <FaInstagram className="text-3xl hover:text-pinkPage transition-all duration-200 cursor-pointer" />
+              <FaLinkedinIn
+                onClick={() => handleSocialMedia("linkedin")}
+                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+              />
+              <FaFacebookF
+                onClick={() => handleSocialMedia("facebook")}
+                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+              />
+              <FaInstagram
+                onClick={() => handleSocialMedia("instagram")}
+                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+              />
+              <FaTwitter
+                onClick={() => handleSocialMedia("twitter")}
+                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+              />
+              <FaTiktok
+                onClick={() => handleSocialMedia("tiktok")}
+                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+              />
+              <FaYoutube
+                onClick={() => handleSocialMedia("youtube")}
+                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+              />
             </Fade>
           </div>
         </div>
         <Fade direction="right">
           <div
-            className={`flex flex-col items-start justify-center p-10 gap-6 -top-10 text-white text-3xl footerContent bg-blackOpacity-50`}
+            className={`flex flex-col items-start justify-center gap-6 py-10 -top-10 text-white text-3xl footerContent bg-blackOpacity-50`}
           >
-            <p className="text-lg mt-10">
+            <p className="text-lg px-10 mt-10">
               We are committed to making the impossible, possible! We build
               strategies to achieve your goals and we will use the best tool to
               make it through.
             </p>
             <div
-              className="flex gap-6 items-center cursor-pointer hover:text-pinkPage hover:transition hover:transform hover:translate-x-2 hover:duration-300"
+              className="flex gap-6 items-center px-10 cursor-pointer hover:text-pinkPage hover:transition hover:transform hover:translate-x-2 hover:duration-300"
               onClick={() => setIsOpen(true)}
             >
               <p className="text-5xl font-bold lowercase">Say Hello</p>
               <BsArrowRight className="text-5xl" />
             </div>
-            <div className="relative flex top-28 text-base text-gray-400 w-full gap-10 justify-center text-center">
-              <p className="w-full text-sm">
+            <div className="relative flex top-28 text-base text-gray-400 w-full  justify-center text-center">
+              <p className="w-6/12 text-sm">
                 ©2022. Daniel Kosttás. All rights reserved.
               </p>
-              <div className="flex w-full items-center justify-between gap-2">
+              <div className="flex w-6/12 items-center justify-between gap-2">
                 <Link to={"/cookie-policy"} className="w-full">
                   <p className="cursor-pointer hover:text-pinkPage transition-all duration-200 w-full text-sm text-right">
                     Cookie Policy

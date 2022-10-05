@@ -1,8 +1,5 @@
-import { Fade, Zoom } from "react-awesome-reveal";
 import { FooterMidScreen } from "../footer/FooterMidScreen";
 import { Header } from "../header/Header";
-import data from "../CardsHome";
-import { Button, IconButton } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 export function MidPrivacy() {
@@ -280,8 +277,7 @@ export function MidPrivacy() {
           requests, as well as any other personal data included in the message.
         </p>
       </div>
-        <FooterMidScreen />
-
+      <FooterMidScreen />
     </div>
   );
 }

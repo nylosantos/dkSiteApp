@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import { Header } from "../header/Header";
 import { Fade } from "react-awesome-reveal";
 import HorizontalScroll from "react-scroll-horizontal";
@@ -7,13 +6,13 @@ export function FullTeam() {
   return (
     <div className="flex w-screen h-screen bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
       <Header bgColor="" shadow="" />
-      <HorizontalScroll>
+      <HorizontalScroll reverseScroll={true}>
         <div className="flex w-screen h-full justify-between">
           <div className="flex absolute top-0 left-0 z-0">
             <Fade direction="left">
               <img
                 className="h-screen"
-                src="./src/assets/leftWatermark.png"
+                src="./assets/leftWatermark.png"
                 alt="DK Left Watermark"
               />
             </Fade>
@@ -22,7 +21,7 @@ export function FullTeam() {
             <Fade className="container">
               <img
                 className=""
-                src="./src/assets/team/teamFullMural.png"
+                src="./assets/team/teamFullMural.png"
                 alt="DK Team"
               />
             </Fade>
@@ -65,7 +64,7 @@ export function FullTeam() {
           <Fade delay={800}>
             <div className="flex w-1/12 fixed bottom-0 right-0 z-0 opacity-60">
               <img
-                src="./src/assets/rightWatermark.png"
+                src="./assets/rightWatermark.png"
                 alt="DK Right Watermark"
               />
             </div>

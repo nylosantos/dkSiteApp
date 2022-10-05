@@ -11,6 +11,7 @@ import { FaPaperPlane } from "react-icons/fa";
 import axios from "axios";
 import { FormEvent, ChangeEvent, useState, useRef } from "react";
 import ReCAPTCHA from 'react-google-recaptcha'
+import useAnalyticsEventTracker from '../useAnalyticsEventTracker'
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -29,6 +30,7 @@ type ServiceMessage = {
 };
 
 export function ContactCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
+  const gaEventTracker = useAnalyticsEventTracker('Contact us')
   const initialFormState = {
     email: "",
     name: "",
@@ -59,6 +61,7 @@ export function ContactCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
     try {
       const result = await axios.post(formSparkUrl, payload);
       console.log(result);
+      gaEventTracker('Cellphone contact submit')
       setMessage({
         class: "bg-green-500",
         text: "Thanks, someone will be in touch shortly.",

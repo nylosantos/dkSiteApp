@@ -26,9 +26,9 @@ export function ModalFullScreen({ isOpen, onClose }: MenuModalProps) {
       <ModalContent>
         <div className="flex absolute top-0 left-0 w-screen justify-center items-center">
           <div className="w-10/12 flex h-full py-5 justify-between items-center">
-            <Link to={"/"} onClick={onClose}>
+            <Link to={"/"} onClick={onClose} className='outline-hidden'>
               <img
-                src="./src/assets/logoBlack.png"
+                src="./assets/logoBlack.png"
                 alt="DK Logo"
                 className="w-1/12"
               />

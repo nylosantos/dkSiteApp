@@ -26,9 +26,9 @@ export function ModalCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
       <ModalContent>
         <div className="flex absolute top-0 left-0 w-screen justify-center items-center">
           <div className="w-10/12 h-full py-4 flex justify-between items-center">
-            <Link to={"/"} onClick={onClose}>
+            <Link to={"/"} onClick={onClose} className='outline-hidden'>
               <img
-                src="./src/assets/logoBlack.png"
+                src="./assets/logoBlack.png"
                 alt="DK Logo"
                 className="w-2/12"
               />
@@ -36,7 +36,7 @@ export function ModalCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
             <Button
               as={IconButton}
               aria-label="Options"
-              icon={<AiOutlineClose/>}
+              icon={<AiOutlineClose />}
               colorScheme="blackAlpha"
               size="md"
               onClick={onClose}

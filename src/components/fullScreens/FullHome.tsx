@@ -10,7 +10,7 @@ export function FullHome() {
       <Header bgColor="" shadow="" />
       <div className="w-screen h-screen flex flex-col items-center justify-center gap-8">
         <Fade className="flex justify-center">
-          <img src="./src/assets/home.png" alt="DK Home" className="w-1/4" />
+          <img src="./assets/home.png" alt="DK Home" className="w-1/4" />
         </Fade>
         <Fade delay={200} cascade={true}>
           <p className="text-2xl text-poppins font-normal text-white">
@@ -20,7 +20,7 @@ export function FullHome() {
       </div>
       <Fade className="flex w-screen justify-end">
         <img
-          src="./src/assets/techHome.png"
+          src="./assets/techHome.png"
           alt="Tech Solutions to Wonder"
           className="w-7/12 -mt-5"
         />
@@ -40,16 +40,9 @@ export function FullHome() {
               return (
                 <div
                   key={key}
-                  className="flex flex-col justify-center h-[200px] p-4 bg-blackOpacity-30 shadow-lg rounded-xl gap-4"
+                  className="flex flex-col justify-center items-center h-[200px] p-4 bg-blackOpacity-30 shadow-lg rounded-xl gap-4"
                 >
-                  <Button
-                    as={IconButton}
-                    aria-label="Services"
-                    icon={data.icon}
-                    variant="unstyled"
-                    className="text-red-500"
-                  />
-
+                  <div className="w-[2.5rem] h-[2.5rem]">{data.icon}</div>
                   <p className="text-white text-center w-[250px]">
                     {data.text}
                   </p>
@@ -65,15 +58,11 @@ export function FullHome() {
             direction="left"
             className="flex justify-center w-screen h-full mt-4"
           >
-            <img
-              src="./src/assets/dkHome.png"
-              alt="DK Home"
-              className="w-3/4"
-            />
+            <img src="./assets/dkHome.png" alt="DK Home" className="w-3/4" />
           </Fade>
           <Fade className="flex justify-end w-2/4">
             <img
-              src="./src/assets/phoneHome.png"
+              src="./assets/phoneHome.png"
               alt="DK Home"
               className="w-full -ml-10"
             />

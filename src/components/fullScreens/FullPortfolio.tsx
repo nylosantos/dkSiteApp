@@ -7,7 +7,7 @@ export function FullPortfolio() {
   return (
     <div className="flex w-screen h-screen bg-gradient-to-b from-bluePage-up to-bluePage-down">
       <Header bgColor="blackOpacity" shadow="shadow" />
-      <HorizontalScroll>
+      <HorizontalScroll reverseScroll={true}>
         <div className="flex flex-col w-screen h-full justify-center items-center">
           <Fade
             cascade
@@ -48,7 +48,7 @@ export function FullPortfolio() {
               <li>OUR TEAM HAS COLLABORATED WITH </li>
             </ul>
           </Fade>
-          <div className="flex flex-wrap gap-4 w-4/5 justify-center z-20">
+          <div className="flex flex-wrap gap-4 w-4/5 p-6 justify-start z-20">
             <Zoom className="flex flex-col items-center">
               {partners.map((partner, key) => {
                 return (
@@ -66,7 +66,7 @@ export function FullPortfolio() {
         <div className="flex w-screen h-screen flex-col items-center justify-center z-10">
           <img
             className="flex absolute"
-            src="./src/assets/portfolioJobs.png"
+            src="./assets/portfolioJobs.png"
             alt="DK Team"
           />
         </div>

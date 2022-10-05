@@ -9,13 +9,13 @@ export function FullAbout() {
   return (
     <div className="flex w-screen h-screen bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
       <Header bgColor="" shadow="" />
-      <HorizontalScroll>
+      <HorizontalScroll reverseScroll={true}>
         <div className="flex w-screen h-full justify-between">
           <div className="flex absolute top-0 left-0 z-0">
             <Fade direction="left">
               <img
                 className="h-screen"
-                src="./src/assets/leftWatermark.png"
+                src="./assets/leftWatermark.png"
                 alt="DK Left Watermark"
               />
             </Fade>
@@ -23,7 +23,7 @@ export function FullAbout() {
           <div className="flex h-screen w-2/4 z-10">
             <Fade direction="left">
               <img
-                src="./src/assets/imageLeft.png"
+                src="./assets/imageLeft.png"
                 alt="God with Reality Glasses"
                 className="h-screen"
               />
@@ -49,7 +49,10 @@ export function FullAbout() {
               {carrouselImages.map((image, key) => {
                 return (
                   <Fade>
-                    <div key={key} className="flex flex-col w-full h-full items-center">
+                    <div
+                      key={key}
+                      className="flex flex-col w-full h-full items-center"
+                    >
                       <div className="flex w-full h-3/4 items-center justify-center">
                         <img
                           className="h-full pointer-events-none"
@@ -58,7 +61,10 @@ export function FullAbout() {
                         />
                       </div>
                       <div className="flex w-2/4 h-1/4 items-center justify-center">
-                        <p key={image.phrase} className="text-lg text-center font-poppins font-light">
+                        <p
+                          key={image.phrase}
+                          className="text-lg text-center font-poppins font-light"
+                        >
                           {image.phrase}
                         </p>
                       </div>
@@ -81,10 +87,7 @@ export function FullAbout() {
           </div>
           <Fade delay={800}>
             <div className="flex w-1/12 fixed bottom-0 right-0 z-0 opacity-60">
-              <img
-                src="./src/assets/rightWatermark.png"
-                alt="DK Right Watermark"
-              />
+              <img src="./assets/rightWatermark.png" alt="DK Right Watermark" />
             </div>
           </Fade>
         </div>

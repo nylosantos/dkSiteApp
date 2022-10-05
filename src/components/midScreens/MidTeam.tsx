@@ -1,45 +1,18 @@
-import { useEffect, useRef, useState } from "react";
 import { Header } from "../header/Header";
 import { Fade } from "react-awesome-reveal";
-import carrouselImages from "../CellphoneArray";
-import HorizontalScroll from "react-scroll-horizontal";
-import { motion, useScroll } from "framer-motion";
-import { IconButton } from "@chakra-ui/react";
-import slide from "../TeamArray";
 
 export function MidTeam() {
-  const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
   return (
     <div
-      ref={ref}
-      className="flex w-screen h-screen bg-gradient-to-b from-yellowPage-up to-yellowPage-down"
+      className="flex flex-col w-screen h-full bg-gradient-to-b from-yellowPage-up to-yellowPage-down"
     >
       <Header bgColor="blackOpacity" shadow="shadow" />
-      {/* <svg
-        id="progress"
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        className="fixed z-50 bottom-0 right-0"
-      >
-        <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
-        <motion.circle
-          cx="50"
-          cy="50"
-          r="30"
-          pathLength="1"
-          className="indicator"
-          style={{ pathLength: scrollXProgress }}
-        />
-      </svg> */}
-      <HorizontalScroll>
         <div className="flex w-screen h-full justify-between">
           <div className="flex absolute top-0 left-0 z-0">
             <Fade direction="left">
               <img
                 className="h-screen"
-                src="./src/assets/leftWatermark.png"
+                src="./assets/leftWatermark.png"
                 alt="DK Left Watermark"
               />
             </Fade>
@@ -48,7 +21,7 @@ export function MidTeam() {
             <Fade className="container">
               <img
                 className=""
-                src="./src/assets/team/teamFullMural.png"
+                src="./assets/team/teamFullMural.png"
                 alt="DK Team"
               />
             </Fade>
@@ -91,13 +64,12 @@ export function MidTeam() {
           <Fade delay={800}>
             <div className="flex w-1/12 fixed bottom-0 right-0 z-0 opacity-60">
               <img
-                src="./src/assets/rightWatermark.png"
+                src="./assets/rightWatermark.png"
                 alt="DK Right Watermark"
               />
             </div>
           </Fade>
         </div>
-      </HorizontalScroll>
     </div>
   );
 }

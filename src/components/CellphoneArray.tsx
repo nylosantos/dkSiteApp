@@ -1,8 +1,8 @@
-import cellphone1 from "/src/assets/cellphone1.png";
-import cellphone2 from "/src/assets/cellphone2.png";
-import cellphone3 from "/src/assets/cellphone3.png";
-import cellphone4 from "/src/assets/cellphone4.png";
-import cellphone5 from "/src/assets/cellphone5.png";
+import cellphone1 from "../assets/cellphone1.png";
+import cellphone2 from "../assets/cellphone2.png";
+import cellphone3 from "../assets/cellphone3.png";
+import cellphone4 from "../assets/cellphone4.png";
+import cellphone5 from "../assets/cellphone5.png";
 
 export default [
   { image: cellphone1, phrase: "SOLUTIONS FOR CREATIVE BRANDS & PROJECTS" },

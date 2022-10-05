@@ -3,25 +3,17 @@ import { Fade, Zoom } from "react-awesome-reveal";
 import partners from "../PartnersArray";
 
 export function CellphonePortfolio() {
-  // //set carousel width
-  // const [carouselWidth, setCarouselWidth] = useState(0);
-  // const carousel = useRef() as React.MutableRefObject<HTMLInputElement>;
-  // useEffect(() => {
-  //   setCarouselWidth(
-  //     carousel.current.scrollWidth - carousel.current.offsetWidth
-  //   );
-  // }, []);
   return (
     <div className="flex flex-col w-screen min-h-screen h-full bg-gradient-to-b from-bluePage-up to-bluePage-down">
       <Header bgColor="blackOpacity" shadow="" />
       <div className="flex flex-col">
         <Fade delay={10} direction="left" damping={0.1} cascade={true}>
           <div className="flex fixed top-10 left-0 w-12/12 z-0">
-            <img src="./src/assets/leftWatermark.png" alt="DK Left Watermark" />
+            <img src="./assets/leftWatermark.png" alt="DK Left Watermark" />
           </div>
         </Fade>
         <Fade className="flex justify-center w-screen h-full mt-28">
-          <img src="./src/assets/logo.png" alt="DK Home" className="w-2/4" />
+          <img src="./assets/logo.png" alt="DK Home" className="w-2/4" />
         </Fade>
         <div className="flex flex-col items-center justify-center gap-4 mt-4">
           <div className="flex flex-col">
@@ -83,7 +75,7 @@ export function CellphonePortfolio() {
               </div>
               <Fade className="flex z-10">
                 <img
-                  src="./src/assets/portfolioJobs.png"
+                  src="./assets/portfolioJobs.png"
                   alt="DK portfolio"
                   className="w-full h-full flex object-cover"
                 />
@@ -91,7 +83,7 @@ export function CellphonePortfolio() {
               <Fade delay={800}>
                 <div className="flex fixed bottom-0 right-0 w-4/12 z-0 opacity-60">
                   <img
-                    src="./src/assets/rightWatermark.png"
+                    src="./assets/rightWatermark.png"
                     alt="DK Right Watermark"
                   />
                 </div>

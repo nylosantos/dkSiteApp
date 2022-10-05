@@ -1,9 +1,6 @@
-import { useEffect, useRef, useState } from "react";
 import { Header } from "../header/Header";
-import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import dataTeam from "../TeamArray";
-import { IconButton } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -12,21 +9,13 @@ import "/src/styles/global.css";
 import { EffectCoverflow, Pagination } from "swiper";
 
 export function CellphoneTeam() {
-  // //set carousel width
-  // const [carouselWidth, setCarouselWidth] = useState(0);
-  // const carousel = useRef() as React.MutableRefObject<HTMLInputElement>;
-  // useEffect(() => {
-  //   setCarouselWidth(
-  //     carousel.current.scrollWidth - carousel.current.offsetWidth
-  //   );
-  // }, []);
   return (
     <div className="flex flex-col w-screen min-h-screen h-full bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
       <Header bgColor="blackOpacity" shadow="" />
       <div className="flex flex-col">
         <Fade delay={10} direction="left" damping={0.1} cascade={true}>
           <div className="flex fixed top-10 left-0 w-12/12 z-0">
-            <img src="./src/assets/leftWatermark.png" alt="DK Left Watermark" />
+            <img src="./assets/leftWatermark.png" alt="DK Left Watermark" />
           </div>
         </Fade>
         <div className="flex flex-col items-center justify-center gap-4 mt-4">
@@ -100,7 +89,7 @@ export function CellphoneTeam() {
               <Fade delay={800}>
                 <div className="flex fixed bottom-0 right-0 w-4/12 z-0 opacity-60">
                   <img
-                    src="./src/assets/rightWatermark.png"
+                    src="./assets/rightWatermark.png"
                     alt="DK Right Watermark"
                   />
                 </div>
