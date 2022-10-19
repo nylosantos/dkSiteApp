@@ -37,7 +37,7 @@ export function FullAbout() {
               className="text-center font-poppins font-bold text-2xl text-white"
             >
               <ul>
-                <li>entertainment, technology FULL</li>
+                <li>entertainment, technology</li>
                 <li>and art to connect people</li>
               </ul>
             </Fade>

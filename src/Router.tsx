@@ -6,12 +6,12 @@ import { Home } from "./components/pages/Home";
 import { Portfolio } from "./components/pages/Portfolio";
 import { PrivacyPolicy } from "./components/pages/PrivacyPolicy";
 import { Team } from "./components/pages/Team";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-K0K30KW2NK");
+ReactGA.send("pageview");
 
 export function Router() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
   return (
     <Routes>
       <Route path="/" element={<Home />} />

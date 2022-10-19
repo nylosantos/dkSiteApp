@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from "react";
 import { Header } from "../header/Header";
-import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import cellphoneData from "../CellphoneScreenArray";
 import { IconButton } from "@chakra-ui/react";
@@ -13,14 +11,6 @@ import "swiper/css/pagination";
 import "/src/styles/global.css";
 
 export function CellphoneAbout() {
-  //set carousel width
-  // const [carouselWidth, setCarouselWidth] = useState(0);
-  // const carousel = useRef() as React.MutableRefObject<HTMLInputElement>;
-  // useEffect(() => {
-  //   setCarouselWidth(
-  //     carousel.current.scrollWidth - carousel.current.offsetWidth
-  //   );
-  // }, []);
   return (
     <div className="flex flex-col w-screen h-full bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
       <Header bgColor="blackOpacity" shadow="" />
@@ -78,39 +68,6 @@ export function CellphoneAbout() {
                   })}
                 </Swiper>
               </>
-
-              {/* <motion.div
-                ref={carousel}
-                className="cursor-grab overflow-hidden z-10"
-              >
-                <motion.div
-                  drag="x"
-                  dragConstraints={{ right: 50, left: -carouselWidth - 50 }}
-                  className="flex gap-8"
-                >
-                  {carrouselImages.map((image) => {
-                    return (
-                      <Fade
-                        delay={100}
-                        className="min-h-[10rem] min-w-[60%] flex flex-col items-center gap-3 mb-10"
-                        key={image.image}
-                      >
-                        <motion.div className="min-h-[10rem] min-w-[100%] flex flex-col items-center gap-3 mb-10">
-                          <img
-                            className="w-full pointer-events-none max-w-[50%]"
-                            src={image.image}
-                            alt=""
-                          />
-                          <p className="text-xs text-center font-poppins font-light">
-                            {image.phrase}
-                          </p>
-                        </motion.div>
-                      </Fade>
-                    );
-                  })}
-                </motion.div>
-              </motion.div> */}
-
               <Fade delay={800}>
                 <div className="flex fixed bottom-0 right-0 w-4/12 z-0 opacity-60">
                   <img

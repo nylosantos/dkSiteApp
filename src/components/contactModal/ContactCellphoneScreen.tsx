@@ -10,8 +10,10 @@ import {
 import { FaPaperPlane } from "react-icons/fa";
 import axios from "axios";
 import { FormEvent, ChangeEvent, useState, useRef } from "react";
-import ReCAPTCHA from 'react-google-recaptcha'
-import useAnalyticsEventTracker from '../useAnalyticsEventTracker'
+import ReCAPTCHA from "react-google-recaptcha";
+import useGoogleAnalyticsEventTracker from "../trackEvents/useGoogleAnalyticsEventTracker";
+import { contactUsCellphone } from "../trackEvents/useFacebookPixelEvent";
+import ReactGA from "react-ga4";
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -30,7 +32,7 @@ type ServiceMessage = {
 };
 
 export function ContactCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
-  const gaEventTracker = useAnalyticsEventTracker('Contact us')
+  const gaEventTracker = useGoogleAnalyticsEventTracker("Contact Cellphone");
   const initialFormState = {
     email: "",
     name: "",
@@ -39,35 +41,46 @@ export function ContactCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
   const [formState, setFormState] = useState<FormState>(initialFormState);
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [message, setMessage] = useState<ServiceMessage>();
-  const [recaptchaToken, setRecaptchaToken] = useState<string>()
+  const [recaptchaToken, setRecaptchaToken] = useState<string>();
   const formId = "MmQKgWrn";
   const formSparkUrl = `https://submit-form.com/${formId}`;
-  const recaptchaKey = '6LeC50AiAAAAAEPsras_i1k16udEkY3km-_saOoM'
-  const recaptchaRef = useRef<any>()
+  const recaptchaKey = "6LeC50AiAAAAAEPsras_i1k16udEkY3km-_saOoM";
+  const recaptchaRef = useRef<any>();
   const updateRecaptchaToken = (token: string | null) => {
-    setRecaptchaToken(token as string)
-  }
+    setRecaptchaToken(token as string);
+  };
   const submitForm = async (event: FormEvent) => {
     event.preventDefault();
     setSubmitting(true);
+    console.log(formState)
+    ReactGA.event({
+      category: "Contact Cellphone",
+      action: "Contact Submit",
+      label: "Contact Submit in Cellphone",
+    }, {
+      name: formState.name,
+      email: formState.email,
+      message: formState.message
+    });
     await postSubmission();
     setSubmitting(false);
   };
   const postSubmission = async () => {
     const payload = {
       ...formState,
-      "g-recaptcha-response": recaptchaToken
+      "g-recaptcha-response": recaptchaToken,
     };
     try {
       const result = await axios.post(formSparkUrl, payload);
       console.log(result);
-      gaEventTracker('Cellphone contact submit')
+      gaEventTracker("Cellphone Contact Submit", "Cellphone Contact Submit");
+      contactUsCellphone();
       setMessage({
         class: "bg-green-500",
         text: "Thanks, someone will be in touch shortly.",
       });
-      setFormState(initialFormState)
-      recaptchaRef.current.reset()
+      setFormState(initialFormState);
+      recaptchaRef.current.reset();
     } catch (error) {
       console.log(error);
       setMessage({
@@ -103,7 +116,9 @@ export function ContactCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
             Contact Us
           </h1>
           {message && (
-            <div className={`my-4 text-white text-xs w-full p-4 ${message.class}`}>
+            <div
+              className={`my-4 text-white text-xs w-full p-4 ${message.class}`}
+            >
               {message.text}
             </div>
           )}
@@ -138,7 +153,9 @@ export function ContactCellphoneScreen({ isOpen, onClose }: MenuModalProps) {
               />
             </div>
             <ReCAPTCHA
-              ref={recaptchaRef} sitekey={recaptchaKey} onChange={updateRecaptchaToken}
+              ref={recaptchaRef}
+              sitekey={recaptchaKey}
+              onChange={updateRecaptchaToken}
             />
             <button
               disabled={submitting}
