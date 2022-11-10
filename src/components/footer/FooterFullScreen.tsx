@@ -67,27 +67,27 @@ export function FooterFullScreen() {
             <Fade>
               <FaLinkedinIn
                 onClick={() => handleSocialMedia("linkedin")}
-                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+                className="text-2xl text-white hover:text-red-600 transition-all duration-200 cursor-pointer"
               />
               <FaFacebookF
                 onClick={() => handleSocialMedia("facebook")}
-                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+                className="text-2xl text-white hover:text-red-600 transition-all duration-200 cursor-pointer"
               />
               <FaInstagram
                 onClick={() => handleSocialMedia("instagram")}
-                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+                className="text-2xl text-white hover:text-red-600 transition-all duration-200 cursor-pointer"
               />
               <FaTwitter
                 onClick={() => handleSocialMedia("twitter")}
-                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+                className="text-2xl text-white hover:text-red-600 transition-all duration-200 cursor-pointer"
               />
               <FaTiktok
                 onClick={() => handleSocialMedia("tiktok")}
-                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+                className="text-2xl text-white hover:text-red-600 transition-all duration-200 cursor-pointer"
               />
               <FaYoutube
                 onClick={() => handleSocialMedia("youtube")}
-                className="text-2xl text-white hover:text-pinkPage transition-all duration-200 cursor-pointer"
+                className="text-2xl text-white hover:text-red-600 transition-all duration-200 cursor-pointer"
               />
             </Fade>
           </div>
@@ -102,7 +102,7 @@ export function FooterFullScreen() {
               make it through.
             </p>
             <div
-              className="flex gap-6 items-center px-10 cursor-pointer hover:text-pinkPage hover:transition hover:transform hover:translate-x-2 hover:duration-300"
+              className="flex gap-6 items-center px-10 cursor-pointer hover:text-red-600 hover:transition hover:transform hover:translate-x-2 hover:duration-300"
               onClick={() => setIsOpen(true)}
             >
               <p className="text-5xl font-bold lowercase">Say Hello</p>
@@ -114,13 +114,13 @@ export function FooterFullScreen() {
               </p>
               <div className="flex w-6/12 items-center justify-between gap-2">
                 <Link to={"/cookie-policy"} className="w-full">
-                  <p className="cursor-pointer hover:text-pinkPage transition-all duration-200 w-full text-sm text-right">
+                  <p className="cursor-pointer hover:text-red-600 transition-all duration-200 w-full text-sm text-right">
                     Cookie Policy
                   </p>
                 </Link>
                 <p className="text-sm">|</p>
                 <Link to={"/privacy-policy"} className="w-full">
-                  <p className="cursor-pointer hover:text-pinkPage transition-all duration-200 text-sm text-left">
+                  <p className="cursor-pointer hover:text-red-600 transition-all duration-200 text-sm text-left">
                     Privacy Policy
                   </p>
                 </Link>

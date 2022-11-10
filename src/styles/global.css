@@ -44,5 +44,6 @@ position: relative;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #FFF !important;
+  @apply
+  bg-red-600
 }

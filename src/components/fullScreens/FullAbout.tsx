@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 export function FullAbout() {
   return (
-    <div className="flex w-screen h-screen bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
-      <Header bgColor="" shadow="" />
+    <div className="flex w-screen h-screen bg-gradient-to-b from-gray-100 to-gray-400">
+      <Header bgColor="" shadow="" colorScheme="blackAlpha"/>
       <HorizontalScroll reverseScroll={true}>
         <div className="flex w-screen h-full justify-between">
           <div className="flex absolute top-0 left-0 z-0">
@@ -34,7 +34,7 @@ export function FullAbout() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-center font-poppins font-bold text-2xl text-white"
+              className="text-center font-poppins font-bold text-2xl text-red-600"
             >
               <ul>
                 <li>entertainment, technology</li>
@@ -63,7 +63,7 @@ export function FullAbout() {
                       <div className="flex w-2/4 h-1/4 items-center justify-center">
                         <p
                           key={image.phrase}
-                          className="text-lg text-center font-poppins font-light"
+                          className="text-lg text-center font-poppins font-light text-red-600"
                         >
                           {image.phrase}
                         </p>
@@ -80,7 +80,7 @@ export function FullAbout() {
                   className="w-[300px] items-center"
                   colorScheme="whiteAlpha"
                 >
-                  <p className="text-center text-2xl text-black">OUR TEAMYS</p>
+                  <p className="text-center text-2xl text-red-600">OUR TEAMYS</p>
                 </IconButton>
               </Link>
             </div>

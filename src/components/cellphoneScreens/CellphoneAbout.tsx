@@ -12,8 +12,8 @@ import "/src/styles/global.css";
 
 export function CellphoneAbout() {
   return (
-    <div className="flex flex-col w-screen h-full bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
-      <Header bgColor="blackOpacity" shadow="" />
+    <div className="flex flex-col w-screen h-full bg-gradient-to-b from-gray-100 to-gray-400">
+      <Header bgColor="blackOpacity" shadow="" colorScheme="blackAlpha" />
       <div className="flex flex-col">
         <Fade delay={10} direction="left" damping={0.1} cascade={true}>
           <div className="flex fixed top-10 left-0 w-12/12 z-0">
@@ -29,7 +29,7 @@ export function CellphoneAbout() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-center font-poppins font-bold text-base text-white"
+              className="text-center font-poppins font-bold text-base text-red-600"
             >
               <ul>
                 <li>entertainment, technology</li>
@@ -62,7 +62,7 @@ export function CellphoneAbout() {
                         className="mb-32 flex flex-col items-center"
                       >
                         {slide.image}
-                        <p className="text-center mt-5 w-3/4">{slide.phrase}</p>
+                        <p className="text-center mt-5 w-3/4 text-red-600">{slide.phrase}</p>
                       </SwiperSlide>
                     );
                   })}
@@ -84,7 +84,7 @@ export function CellphoneAbout() {
                   className="w-[300px] items-center"
                   colorScheme="whiteAlpha"
                 >
-                  <p className="text-center text-2xl text-black">OUR TEAMYS</p>
+                  <p className="text-center text-2xl text-red-600">OUR TEAMYS</p>
                 </IconButton>
               </Link>
             </div>

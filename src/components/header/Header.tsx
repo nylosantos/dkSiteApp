@@ -6,9 +6,10 @@ import { HeaderFullScreen } from "./HeaderFullScreen";
 type Props = {
   bgColor: string;
   shadow: string;
+  colorScheme: 'pink' | 'yellow' | 'whiteAlpha' | 'blackAlpha';
 };
 
-export function Header({ bgColor, shadow }: Props) {
+export function Header({ bgColor, shadow, colorScheme }: Props) {
   // GET SCREEN SIZE DYNAMICALLY
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
@@ -45,11 +46,11 @@ export function Header({ bgColor, shadow }: Props) {
   const fullBreackpoint = 1023;
   if (width > fullBreackpoint){
     return (
-      <HeaderFullScreen />
+      <HeaderFullScreen colorScheme={colorScheme} />
     )
   }
   if (width > midBreakpoint && width > heigth ) {
-    return <HeaderMidScreen />;
+    return <HeaderMidScreen colorScheme={colorScheme} />;
   }
-  return <HeaderCellphoneScreen headerStyle={headerStyle} />;
+  return <HeaderCellphoneScreen headerStyle={headerStyle} colorScheme={colorScheme} />;
 }

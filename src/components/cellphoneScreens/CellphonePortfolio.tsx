@@ -4,8 +4,8 @@ import partners from "../PartnersArray";
 
 export function CellphonePortfolio() {
   return (
-    <div className="flex flex-col w-screen min-h-screen h-full bg-gradient-to-b from-bluePage-up to-bluePage-down">
-      <Header bgColor="blackOpacity" shadow="" />
+    <div className="flex flex-col w-screen min-h-screen h-full bg-gradient-to-b from-gray-100 to-gray-400">
+      <Header bgColor="blackOpacity" shadow="" colorScheme="blackAlpha" />
       <div className="flex flex-col">
         <Fade delay={10} direction="left" damping={0.1} cascade={true}>
           <div className="flex fixed top-10 left-0 w-12/12 z-0">
@@ -13,7 +13,7 @@ export function CellphonePortfolio() {
           </div>
         </Fade>
         <Fade className="flex justify-center w-screen h-full mt-28">
-          <img src="./assets/logo.png" alt="DK Home" className="w-2/4" />
+          <img src="./assets/logoBlack.png" alt="DK Home" className="w-2/4" />
         </Fade>
         <div className="flex flex-col items-center justify-center gap-4 mt-4">
           <div className="flex flex-col">
@@ -21,7 +21,7 @@ export function CellphonePortfolio() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-left px-6 mt-16 font-poppins font-bold text-xl text-white"
+              className="text-left px-6 mt-16 font-poppins font-bold text-xl text-red-600"
             >
               <ul>
                 <li>WHO WE ARE</li>
@@ -32,7 +32,7 @@ export function CellphonePortfolio() {
                 cascade
                 damping={0.7}
                 delay={300}
-                className="text-left px-6 mb-10 font-poppins text-base text-white"
+                className="text-left px-6 mb-10 font-poppins text-base text-gray-800"
               >
                 <ul>
                   <li>
@@ -52,7 +52,7 @@ export function CellphonePortfolio() {
                 cascade
                 damping={0.7}
                 delay={300}
-                className="text-left px-6 font-poppins font-bold text-xl text-white"
+                className="text-left px-6 font-poppins font-bold text-xl text-red-600"
               >
                 <ul>
                   <li>OUR TEAM HAS </li>

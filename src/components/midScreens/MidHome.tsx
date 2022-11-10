@@ -6,14 +6,14 @@ import { Button, IconButton } from "@chakra-ui/react";
 
 export function MidHome() {
   return (
-    <div className="bg-pinkPage w-screen flex flex-col">
-      <Header bgColor="" shadow="" />
+    <div className="bg-gray-100 w-screen flex flex-col">
+      <Header bgColor="" shadow="" colorScheme="blackAlpha" />
       <div className="w-screen h-screen flex flex-col items-center justify-center gap-8">
         <Fade className="flex justify-center">
           <img src="./assets/home.png" alt="DK Home" className="w-1/4" />
         </Fade>
         <Fade delay={200} cascade={true}>
-          <p className="text-poppins font-normal text-white">
+          <p className="text-poppins font-normal text-red-600">
             #CreatingEmotions
           </p>
         </Fade>
@@ -28,7 +28,7 @@ export function MidHome() {
       <Fade
         damping={0.1}
         cascade={true}
-        className="w-full px-10 -mt-20 mb-20 font-bold text-white"
+        className="w-full px-10 -mt-20 mb-20 font-bold text-red-600"
       >
         TECH SOLUTIONS TO WONDER
       </Fade>
@@ -39,7 +39,7 @@ export function MidHome() {
               return (
                 <div
                   key={key}
-                  className="flex flex-col justify-center items-center h-[200px] p-4 bg-blackOpacity-30 shadow-lg rounded-xl gap-4"
+                  className="flex flex-col justify-center items-center h-[200px] p-4 bg-gray-600 shadow-lg rounded-xl gap-4"
                 >
                   <div className="w-[2.5rem] h-[2.5rem]">{data.icon}</div>
                   <p className="text-white text-center w-[250px]">
@@ -74,7 +74,7 @@ export function MidHome() {
             cascade
             damping={0.7}
             delay={300}
-            className="w-2/4 flex flex-col justify-center -mt-12 pl-10 font-poppins font-bold text-lg text-white"
+            className="w-2/4 flex flex-col justify-center -mt-12 pl-10 font-poppins font-bold text-lg text-red-600"
           >
             <ul>
               <li>eyes to</li>

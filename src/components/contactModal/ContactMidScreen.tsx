@@ -107,7 +107,7 @@ export function ContactMidScreen({ isOpen, onClose }: MenuModalProps) {
         <ModalCloseButton />
         <ModalBody className="flex flex-col w-11/12 m-auto gap-1 justify-center">
           <h1 className="text-2xl font-bold font-poppins flex items-center gap-3">
-            <FaPaperPlane />
+            <FaPaperPlane className="text-red-600" />
             Contact Us
           </h1>
           {message && (
@@ -152,7 +152,7 @@ export function ContactMidScreen({ isOpen, onClose }: MenuModalProps) {
             />
             <button
               disabled={submitting}
-              className="my-2 bg-yellowPage-up text-white font-bold w-full p-2 hover:bg-yellowPage-down transition-colors duration-200"
+              className="my-2 bg-red-600 text-white font-bold w-full p-2 hover:bg-red-700 transition-colors duration-200"
             >
               {submitting ? "Submitting..." : "Submit"}
             </button>

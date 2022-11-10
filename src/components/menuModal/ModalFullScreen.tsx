@@ -43,8 +43,8 @@ export function ModalFullScreen({ isOpen, onClose }: MenuModalProps) {
             />
           </div>
         </div>
-        <ModalBody className="flex">
-          <MenuContent style="flex flex-col gap-16 text-5xl" />
+        <ModalBody className="flex bg-gradient-to-b from-gray-100 to-gray-400">
+          <MenuContent style="flex flex-col gap-16 text-5xl"/>
         </ModalBody>
       </ModalContent>
     </Modal>

@@ -6,14 +6,14 @@ import { Button, IconButton } from "@chakra-ui/react";
 
 export function FullHome() {
   return (
-    <div className="bg-pinkPage w-screen flex flex-col">
-      <Header bgColor="" shadow="" />
+    <div className="bg-gray-100 w-screen flex flex-col">
+      <Header bgColor="" shadow="" colorScheme="blackAlpha"/>
       <div className="w-screen h-screen flex flex-col items-center justify-center gap-8">
         <Fade className="flex justify-center">
           <img src="./assets/home.png" alt="DK Home" className="w-1/4" />
         </Fade>
         <Fade delay={200} cascade={true}>
-          <p className="text-2xl text-poppins font-normal text-white">
+          <p className="text-2xl text-poppins font-normal text-red-600">
             #CreatingEmotions
           </p>
         </Fade>
@@ -28,7 +28,7 @@ export function FullHome() {
       <Fade
         damping={0.1}
         cascade={true}
-        className="w-full px-32 -mt-20 mb-20 font-bold text-white text-3xl"
+        className="w-full px-32 -mt-20 mb-20 font-bold text-red-600 text-3xl"
       >
         TECH SOLUTIONS TO WONDER
       </Fade>
@@ -40,7 +40,7 @@ export function FullHome() {
               return (
                 <div
                   key={key}
-                  className="flex flex-col justify-center items-center h-[200px] p-4 bg-blackOpacity-30 shadow-lg rounded-xl gap-4"
+                  className="flex flex-col justify-center items-center h-[200px] p-4 bg-gray-600 shadow-lg rounded-xl gap-4"
                 >
                   <div className="w-[2.5rem] h-[2.5rem]">{data.icon}</div>
                   <p className="text-white text-center w-[250px]">
@@ -71,7 +71,7 @@ export function FullHome() {
             cascade
             damping={0.7}
             delay={300}
-            className="w-2/4 flex flex-col justify-center -mt-12 pl-10 font-poppins font-bold text-2xl text-white"
+            className="w-2/4 flex flex-col justify-center -mt-12 pl-10 font-poppins font-bold text-2xl text-red-600"
           >
             <ul>
               <li>eyes to</li>

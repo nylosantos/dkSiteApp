@@ -4,8 +4,8 @@ import HorizontalScroll from "react-scroll-horizontal";
 
 export function FullTeam() {
   return (
-    <div className="flex w-screen h-screen bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
-      <Header bgColor="" shadow="" />
+    <div className="flex w-screen h-screen bg-gradient-to-b from-gray-100 to-gray-400">
+      <Header bgColor="" shadow="" colorScheme="blackAlpha"/>
       <HorizontalScroll reverseScroll={true}>
         <div className="flex w-screen h-full justify-between">
           <div className="flex absolute top-0 left-0 z-0">
@@ -33,7 +33,7 @@ export function FullTeam() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-right px-6 font-poppins font-bold text-5xl text-black"
+              className="text-right px-6 font-poppins font-bold text-5xl text-red-600"
             >
               <ul>
                 <li>OUR TEAMYS</li>
@@ -43,7 +43,7 @@ export function FullTeam() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-right px-6 mb-10 font-poppins text-2xl text-white"
+              className="text-right px-6 mb-10 font-poppins text-2xl text-gray-800"
             >
               <ul>
                 <li>

@@ -5,14 +5,14 @@ import partners from "../PartnersArray";
 
 export function MidPortfolio() {
   return (
-    <div className="flex flex-col w-screen h-full bg-gradient-to-b from-bluePage-up to-bluePage-down">
-      <Header bgColor="blackOpacity" shadow="shadow" />
+    <div className="flex flex-col w-screen h-full bg-gradient-to-b from-gray-100 to-gray-400">
+      <Header bgColor="blackOpacity" shadow="shadow" colorScheme="blackAlpha" />
       <div className="flex flex-col w-screen h-full justify-center mt-10">
         <Fade
           cascade
           damping={0.7}
           delay={300}
-          className="text-left px-6 mt-8 font-poppins font-bold text-base text-white"
+          className="text-left px-6 mt-8 font-poppins font-bold text-base text-red-600"
         >
           <ul>
             <li>WHO WE ARE</li>
@@ -22,7 +22,7 @@ export function MidPortfolio() {
           cascade
           damping={0.7}
           delay={300}
-          className="text-left px-6 font-poppins text-xxs mt-4 text-white"
+          className="text-left px-6 font-poppins text-xxs mt-4 text-gray-800"
         >
           <ul>
             <li>
@@ -41,7 +41,7 @@ export function MidPortfolio() {
           cascade
           damping={0.7}
           delay={300}
-          className="text-left px-6 font-poppins font-bold text-md my-4 text-white"
+          className="text-left px-6 font-poppins font-bold text-md my-4 text-red-600"
         >
           <ul>
             <li>OUR TEAM HAS COLLABORATED WITH </li>

@@ -4,7 +4,11 @@ import { Button, IconButton } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
-export function HeaderFullScreen() {
+type Props = {
+  colorScheme: "pink" | "yellow" | "whiteAlpha" | "blackAlpha";
+};
+
+export function HeaderFullScreen({ colorScheme }: Props) {
   function handleToggleModal() {
     if (isOpen) {
       setIsOpen(false);
@@ -19,16 +23,20 @@ export function HeaderFullScreen() {
       <MenuModal isOpen={isOpen} onClose={closeInstructionModal} />
       <div className="w-10/12 h-full py-5 flex justify-between items-center">
         <div className="h-full w-full">
-        <Link to={"/"} className='outline-hidden'>
-          <img src="./assets/logo.png" alt="DK Logo" className="w-1/12" />
-        </Link>
+          <Link to={"/"} className="outline-hidden">
+            <img
+              src="./assets/logoBlack.png"
+              alt="DK Logo"
+              className="w-1/12"
+            />
+          </Link>
         </div>
         <Button
           as={IconButton}
           aria-label="Options"
           icon={<GiHamburgerMenu />}
           size="md"
-          colorScheme="whiteAlpha"
+          colorScheme={colorScheme}
           onClick={handleToggleModal}
         />
       </div>

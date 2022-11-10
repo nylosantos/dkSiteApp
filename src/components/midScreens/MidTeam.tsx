@@ -4,9 +4,9 @@ import { Fade } from "react-awesome-reveal";
 export function MidTeam() {
   return (
     <div
-      className="flex flex-col w-screen h-full bg-gradient-to-b from-yellowPage-up to-yellowPage-down"
+      className="flex flex-col w-screen h-full bg-gradient-to-b from-gray-100 to-gray-400"
     >
-      <Header bgColor="blackOpacity" shadow="shadow" />
+      <Header bgColor="blackOpacity" shadow="shadow" colorScheme="blackAlpha" />
         <div className="flex w-screen h-full justify-between">
           <div className="flex absolute top-0 left-0 z-0">
             <Fade direction="left">
@@ -33,7 +33,7 @@ export function MidTeam() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-right px-6 font-poppins font-bold text-lg text-black"
+              className="text-right px-6 font-poppins font-bold text-lg text-red-600"
             >
               <ul>
                 <li>OUR TEAMYS</li>
@@ -43,7 +43,7 @@ export function MidTeam() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-right px-6 mb-10 font-poppins text-xs text-white"
+              className="text-right px-6 mb-10 font-poppins text-xs text-gray-800"
             >
               <ul>
                 <li>

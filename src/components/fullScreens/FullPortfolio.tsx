@@ -5,15 +5,15 @@ import partners from "../PartnersArray";
 
 export function FullPortfolio() {
   return (
-    <div className="flex w-screen h-screen bg-gradient-to-b from-bluePage-up to-bluePage-down">
-      <Header bgColor="blackOpacity" shadow="shadow" />
+    <div className="flex w-screen h-screen bg-gradient-to-b from-gray-100 to-gray-400">
+      <Header bgColor="blackOpacity" shadow="shadow" colorScheme="blackAlpha" />
       <HorizontalScroll reverseScroll={true}>
         <div className="flex flex-col w-screen h-full justify-center items-center">
           <Fade
             cascade
             damping={0.7}
             delay={300}
-            className="w-4/5 text-left px-6 mt-8 font-poppins font-bold text-3xl text-white"
+            className="w-4/5 text-left px-6 mt-8 font-poppins font-bold text-3xl text-red-600"
           >
             <ul>
               <li>WHO WE ARE</li>
@@ -23,7 +23,7 @@ export function FullPortfolio() {
             cascade
             damping={0.7}
             delay={300}
-            className="w-4/5 text-left px-6 font-poppins text-lg mt-6 text-white"
+            className="w-4/5 text-left px-6 font-poppins text-lg mt-6 text-gray-800"
           >
             <ul>
               <li>
@@ -42,7 +42,7 @@ export function FullPortfolio() {
             cascade
             damping={0.7}
             delay={300}
-            className="w-4/5 text-left px-6 font-poppins font-bold text-3xl my-6 text-white"
+            className="w-4/5 text-left px-6 font-poppins font-bold text-3xl my-6 text-red-600"
           >
             <ul>
               <li>OUR TEAM HAS COLLABORATED WITH </li>

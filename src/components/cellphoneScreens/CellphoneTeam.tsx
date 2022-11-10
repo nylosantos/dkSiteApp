@@ -10,8 +10,8 @@ import { EffectCoverflow, Pagination } from "swiper";
 
 export function CellphoneTeam() {
   return (
-    <div className="flex flex-col w-screen min-h-screen h-full bg-gradient-to-b from-yellowPage-up to-yellowPage-down">
-      <Header bgColor="blackOpacity" shadow="" />
+    <div className="flex flex-col w-screen min-h-screen h-full bg-gradient-to-b from-gray-100 to-gray-400">
+      <Header bgColor="blackOpacity" shadow="" colorScheme="blackAlpha" />
       <div className="flex flex-col">
         <Fade delay={10} direction="left" damping={0.1} cascade={true}>
           <div className="flex fixed top-10 left-0 w-12/12 z-0">
@@ -24,7 +24,7 @@ export function CellphoneTeam() {
               cascade
               damping={0.7}
               delay={300}
-              className="text-right px-6 mt-16 font-poppins font-bold text-xl text-black"
+              className="text-right px-6 mt-16 font-poppins font-bold text-xl text-red-600"
             >
               <ul>
                 <li>OUR TEAMYS</li>
@@ -57,7 +57,7 @@ export function CellphoneTeam() {
                         {slide.img}
                         <p className="font-bold">{slide.name}</p>
                         <p className="font-bold">{slide.country}</p>
-                        <p className="uppercase text-white text-base">
+                        <p className="uppercase text-red-600 text-base">
                           {slide.job}
                         </p>
                       </SwiperSlide>
@@ -69,7 +69,7 @@ export function CellphoneTeam() {
                 cascade
                 damping={0.7}
                 delay={300}
-                className="text-right px-6 mb-10 font-poppins text-base text-white"
+                className="text-right px-6 mb-10 font-poppins text-base text-gray-800 z-10"
               >
                 <ul>
                   <li>

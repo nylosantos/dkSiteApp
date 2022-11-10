@@ -8,7 +8,7 @@ import { RiSlideshow3Line, RiVipCrownLine, RiVipLine } from "react-icons/ri";
 export default [
   {
     icon: <AiOutlineMobile size='base' className="text-white"/>,
-    text: "EXPAND YOUR COMMUNICATION WITH SPECIAL WEB & MOBILE APP DEVELOPMENTSOLUTIONS FOR CREATIVE BRANDS & PROJECTS",
+    text: "SOLUTIONS FOR CREATIVE BRANDS & PROJECTS: WEB & MOBILE APP DEVELOPMENT",
   },
   {
     icon: <GiProtectionGlasses size='base' className="text-white"/>,

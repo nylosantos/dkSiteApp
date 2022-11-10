@@ -16,18 +16,18 @@ export function MenuContent({ style }: Props) {
       <ol className={style}>
         <Fade cascade={true}>
           <Link to={"/"} onClick={closeInstructionModal}>
-            <li>Home</li>
+            <li className="hover:text-red-600 transition-all duration-300">Home</li>
           </Link>
           <Link to={"/about"} onClick={closeInstructionModal}>
-            <li>About</li>
+            <li className="hover:text-red-600 transition-all duration-300">About</li>
           </Link>
           <Link to={"/team"} onClick={closeInstructionModal}>
-            <li>Our Teamys</li>
+            <li className="hover:text-red-600 transition-all duration-300">Our Teamys</li>
           </Link>
           <Link to={"/portfolio"} onClick={closeInstructionModal}>
-            <li>Portfolio</li>
+            <li className="hover:text-red-600 transition-all duration-300">Portfolio</li>
           </Link>
-          <li className="cursor-pointer" onClick={() => setIsOpen(true)}>
+          <li className="hover:text-red-600 transition-all duration-300 cursor-pointer" onClick={() => setIsOpen(true)}>
             Contact
           </li>
         </Fade>
