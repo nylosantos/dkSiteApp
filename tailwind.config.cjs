@@ -3,25 +3,29 @@ module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      screens: {
+        tablet: "640px",
+        desktop: "1024px",
+      },
       fontSize: {
-        xxs: '0.6rem',
-        xxxs: '0.4rem',
+        xxs: "0.6rem",
+        xxxs: "0.4rem",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        'footer': "url('src/assets/bgFooter.jpg')",
+        footer: "url('src/assets/bgFooter.jpg')",
       },
       colors: {
-        pinkPage: '#ef1aa8',
+        pinkPage: "#ef1aa8",
         yellowPage: {
           up: "#f8c20d",
           down: "#b9910a",
         },
         bluePage: {
           up: "#63f8d3",
-          down: "#0c3372"
+          down: "#0c3372",
         },
         blackOpacity: {
           10: "#0000001A",

@@ -1,44 +1,47 @@
-import { useEffect, useState } from "react";
-import { ModalMidScreen } from "./ModalMidScreen";
-import { ModalCellphoneScreen } from "./ModalCellphoneScreen";
-import { ModalFullScreen } from "./ModalFullScreen";
+import { Header } from "../header/Header";
+import { ScreenSizeRouterProps } from "../../Router";
+import { MenuContent } from "./MenuContent";
 
-interface MenuModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+import { Modal, ModalBody, ModalContent } from "@chakra-ui/react";
+
+interface MenuModalProps extends ScreenSizeRouterProps {
+  openMenu: boolean;
+  handleToggleMenu: () => void;
 }
 
-export function MenuModal({ isOpen, onClose }: MenuModalProps) {
-  // GET SCREEN SIZE DYNAMICALLY
-  const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
-    dynamicHeight: window.innerHeight,
-  });
-  const setDimension = () => {
-    getDimension({
-      dynamicWidth: window.innerWidth,
-      dynamicHeight: window.innerHeight,
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", setDimension);
-
-    return () => {
-      window.removeEventListener("resize", setDimension);
-    };
-  }, [screenSize]);
-  const width = screenSize.dynamicWidth;
-  const heigth = screenSize.dynamicHeight;
-  const midBreakpoint = 652;
-  const fullBreackpoint = 1023;
-  if (width > fullBreackpoint) {
-    return <ModalFullScreen isOpen={isOpen} onClose={onClose} />;
-  }
-  if (width > midBreakpoint && width > heigth) {
-    return <ModalMidScreen isOpen={isOpen} onClose={onClose} />;
-  }
-  {
-    return <ModalCellphoneScreen isOpen={isOpen} onClose={onClose} />;
-  }
+export function MenuModal({
+  openMenu,
+  handleToggleMenu,
+  windowSize,
+  tabletBreakpoint,
+  desktopBreakpoint,
+}: MenuModalProps) {
+  return (
+    <Modal
+      isOpen={openMenu}
+      onClose={handleToggleMenu}
+      size="full"
+      isCentered
+      motionPreset="none"
+    >
+      <ModalContent>
+        <Header
+          colorScheme="whiteAlpha"
+          variant="solid"
+          openMenu={openMenu}
+          handleToggleMenu={handleToggleMenu}
+        />
+        <ModalBody className="flex bg-white">
+          <MenuContent
+            divider={windowSize.innerWidth < tabletBreakpoint ? true : false}
+            handleToggleMenu={handleToggleMenu}
+            openMenu={openMenu}
+            windowSize={windowSize}
+            tabletBreakpoint={tabletBreakpoint}
+            desktopBreakpoint={desktopBreakpoint}
+          />
+        </ModalBody>
+      </ModalContent>
+    </Modal>
+  );
 }
